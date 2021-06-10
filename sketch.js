@@ -81,9 +81,12 @@ function draw() {
   //packageSprite.x = helicopterSprite.x
   //packageSprite.y = helicopterSprite.y
 
+  if(packageSprite.x >=640){
+	  helicopterSprite.velocity = 0;
+  }
 
-  leftArrow();
-  rightArrow();
+
+  
   
 
   drawSprites();
@@ -94,16 +97,16 @@ function keyPressed(){
 	if (keyCode === DOWN_ARROW) {
 		Body.setStatic(packageBody,false); 
 	}
-}
 
-function leftArrow(){
 	if (keyCode === LEFT_ARROW) {
-		helicopterSprite.x = helicopterSprite.x-3;
+		helicopterSprite.x = helicopterSprite.x-10;
+		Body.translate(packageBody, {x:- 10, y:0})
 	}
-}
 
-function rightArrow(){
+
 	if(keyCode === RIGHT_ARROW){
-		helicopterSprite.x = helicopterSprite.x+3;
+		helicopterSprite.x = helicopterSprite.x+10;
+		Body.translate(packageBody, {x:+10, y:0})
 	}
+
 }
