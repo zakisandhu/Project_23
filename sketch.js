@@ -81,14 +81,6 @@ function draw() {
   //packageSprite.x = helicopterSprite.x
   //packageSprite.y = helicopterSprite.y
 
-  if(packageSprite.x >=640){
-	  helicopterSprite.velocity = 0;
-  }
-
-
-  
-  
-
   drawSprites();
  
 }
